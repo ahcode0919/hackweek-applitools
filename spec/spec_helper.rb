@@ -8,7 +8,7 @@ require_relative '../helpers/selenium_config'
 require_relative '../page_objects/page'
 
 module IntegrationTests
-  Dir.glob('./page_objects/**/*.rb').each(&method(:require))
+  Dir.glob('../page_objects/**/*.rb').each(&method(:require))
 
   RSpec.configure do |config|
     config.include Capybara::DSL

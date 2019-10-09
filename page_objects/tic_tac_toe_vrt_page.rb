@@ -1,42 +1,31 @@
 # frozen_string_literal: true
 
 module IntegrationTests
-  module PageObjects
-    # Tic tac toe VRT game page
-    class TicTacToeVRTPage < Page
-      def visible?
-        header.is_visible?
-      end
+  # Tic tac toe VRT game page
+  class TicTacToeVRTPage < Page
+    def click_square(number)
+      raise 'invalid square number' if number < 1 || number > 8
 
-      def click_square(number)
-        raise 'invalid square number' if number < 1 || number > 8
+      squares[number].click
+    end
 
-        squares[number].click
-      end
+    def self.visit_page
+      Capybara.current_session.visit('/')
+      TicTacToePage.new
+    end
 
-      def self.visit_page
-        Capybara.current_session.visit('/')
-        wait { visible? }
-        TicTacToePage.new
-      end
+    private
 
-      private
+    def game_start_button
+      find('.step-button', text: 'Go to game start')
+    end
 
-      def game_start_button
-        find('.step-button', text: 'Go to game start')
-      end
+    def sort_moves_button
+      find('.sort-button')
+    end
 
-      def header
-        find('.navbar-brand', text: 'Tic-Tac-Toe')
-      end
-
-      def sort_moves_button
-        find('.sort-button')
-      end
-
-      def squares
-        page.all('.square', count: 9)
-      end
+    def squares
+      page.all('.square', count: 9)
     end
   end
 end

@@ -37,7 +37,7 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     multipart-post (2.1.1)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)

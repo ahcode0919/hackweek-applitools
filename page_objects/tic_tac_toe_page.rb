@@ -57,6 +57,7 @@ module IntegrationTests
 
     def self.visit_page
       Capybara.current_session.visit('/')
+      sleep(1)
       TicTacToePage.new
     end
 

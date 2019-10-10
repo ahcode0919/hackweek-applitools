@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 
-require_relative '../spec_helper'
+require_relative '../../page_objects/tic_tac_toe_page'
 
 module IntegrationTests
-  describe 'Given a user' do
+  describe 'Given a user', js: true do
+
     before(:each) do
       Capybara.app_host = 'https://tic-tac-toe-kase9000.netlify.com/'
+      Capybara.current_driver = :selenium_chrome
     end
 
-    describe 'When completing a tic-tac-toe game' do
+    describe 'When playing a tic-tac-toe game' do
       it 'can complete a draw game' do
         game_page = TicTacToePage.visit_page
                                  .click_square(0)

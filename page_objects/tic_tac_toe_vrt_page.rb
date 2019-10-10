@@ -9,6 +9,13 @@ module IntegrationTests
       squares[number].click
     end
 
+    def go_to_move(number)
+      raise 'Invalid move number' if step_buttons.count < number
+
+      step_buttons.select { |el| el.text == "Go to move ##{number}" }.first.click
+      TicTacToePage.new
+    end
+
     def self.visit_page
       Capybara.current_session.visit('/')
       TicTacToePage.new
@@ -26,6 +33,10 @@ module IntegrationTests
 
     def squares
       page.all('.square', count: 9)
+    end
+
+    def step_buttons
+      page.all('.step-button')
     end
   end
 end

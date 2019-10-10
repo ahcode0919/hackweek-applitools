@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
+require 'byebug'
 require 'capybara/rspec'
-require 'eyes_capybara'
+require 'eyes_selenium'
 require 'webdrivers'
 
 require_relative '../helpers/selenium_config'
@@ -20,7 +21,6 @@ module IntegrationTests
     end
 
     config.before(:each) do
-      Capybara.current_driver = :eyes
     end
 
     config.after(:suite) do

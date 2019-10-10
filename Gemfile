@@ -8,4 +8,6 @@ gem 'byebug', require: false
 gem 'capybara'
 gem 'dotenv'
 gem 'eyes_capybara'
+gem 'rake'
+gem 'rspec'
 gem 'webdrivers'

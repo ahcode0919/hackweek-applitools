@@ -3,7 +3,7 @@
 require 'dotenv'
 require 'eyes_capybara'
 
-Dotenv.load('../.env')
+Dotenv.load
 
 # Selenium Driver Helper
 class SeleniumDriver

@@ -34,6 +34,20 @@ This will run a typical set of standard Capybara test cases against the tic-tac-
 
 This will run a set of test cases optimized for VRT against the tic-tac-toe application
 
+## Metrics
+
+### Traditional Approach
+
+- Lines of test code: 57
+- Lines of page object code: 90
+- Runtime (single thread): 15sec
+
+### VRT Approach
+
+- Lines of test code: 46 (-23%)
+- Lines of page object code: 42 (-114%)
+- Runtime (single thread): 27sec
+
 ## Resources
 
 -  [Applitools](https://applitools.com/)

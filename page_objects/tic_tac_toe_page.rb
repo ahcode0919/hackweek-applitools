@@ -2,10 +2,6 @@
 
 module IntegrationTests
   class TicTacToePage < Page
-    def visible?
-      header.is_visible?
-    end
-
     def click_square(number)
       raise 'Invalid square number' if number.negative? || number > 8
 
@@ -48,6 +44,10 @@ module IntegrationTests
     def sort_moves
       sort_moves_button.click
       TicTacToePage.new
+    end
+
+    def visible?
+      header.is_visible?
     end
 
     def winner?(char)

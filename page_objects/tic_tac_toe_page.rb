@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module IntegrationTests
-  # Tic tac toe game page
   class TicTacToePage < Page
     def visible?
       header.is_visible?

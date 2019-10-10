@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module IntegrationTests
-  # Tic tac toe VRT game page
   class TicTacToeVRTPage < Page
     def click_square(number)
       raise 'invalid square number' if number < 1 || number > 8

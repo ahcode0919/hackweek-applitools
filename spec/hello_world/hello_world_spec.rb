@@ -18,7 +18,6 @@ module IntegrationTests
 
         click_button('Click me!')
         @eyes.check_window('Click!')
-
         @eyes.close
       end
     end

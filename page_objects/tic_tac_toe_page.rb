@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative './page.rb'
+
 module IntegrationTests
   class TicTacToePage < Page
     def click_square(number)

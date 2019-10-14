@@ -4,7 +4,6 @@ require_relative '../../page_objects/tic_tac_toe_page'
 
 module IntegrationTests
   describe 'Given a user', js: true do
-
     before(:each) do
       Capybara.app_host = 'https://tic-tac-toe-kase9000.netlify.com/'
       Capybara.current_driver = :selenium_chrome

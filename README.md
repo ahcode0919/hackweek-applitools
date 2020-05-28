@@ -44,8 +44,8 @@ This will run a set of test cases optimized for VRT against the tic-tac-toe appl
 
 ### VRT Approach
 
-- Lines of test code: 46 (-23%)
-- Lines of page object code: 42 (-114%)
+- Lines of test code: 46
+- Lines of page object code: 42
 - Runtime (single thread): 27sec
 
 ## Resources
